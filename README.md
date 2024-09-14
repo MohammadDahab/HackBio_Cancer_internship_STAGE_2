@@ -2,7 +2,7 @@
 ## **Gene Expression Analysis and Functional Enrichment Interpretation** 
 
 **(Machine Learning/Data Science & Biomarkers Team)**
-## **Authors (@slack): Mohammed Dahab (@m_dahab7), Aya Elhagry (@AyaElhagry) Nourhan Mahmoud (@NourhanM1), Alaa Khaled (@Alaa043), Marwan Magdy(@Marwan16)**
+## **Authors (@slack): Mohammed Dahab (@mdahab7), Aya Elhagry (@AyaElhagry) Nourhan Mahmoud (@NourhanM1), Alaa Khaled (@Alaa043), Marwan Magdy(@Marwan16)**
 `THE SOURCE CODE` [Codebase link](https://github.com/MohammadDahab/HackBio_Cancer_internship_STAGE_2/blob/main/Stage_2_task.R)
 
 ### Our objective was to visualize and explain a gene expression dataset by employing heatmaps and conducting functional enrichment analysis using the **glioblastoma** [dataset](https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv).
