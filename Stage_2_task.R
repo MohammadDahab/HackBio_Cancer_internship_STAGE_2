@@ -175,7 +175,7 @@ View(enrich_5)
 
 # Convert p-values to -log10(p_value) for better visualization
 
-enrich_5$log_pval <- -log10(enrich_5$Enrichment.FDR)
+enrich_5$log_pval <- -log10(enrich_5$Enrichment_FDR)
 
 # Create the lollipop plot for the pathway data
 
