@@ -150,9 +150,23 @@ write.csv(down_regulated, "down_reg.csv")
 
 library(ggplot2)
 
-## Read the enrichment file with the top 5 pathways
+## Import the enrichment file with the pathways
 
-enrich <- read.csv("enrichment_all.csv", header = TRUE, sep = ",")
+enrich <- data.frame(nGenes = c(10, 5, 4, 5, 5, 2),
+
+Pathway.Genes = c(294, 99, 93, 171, 191, 23),
+
+Enrichment_FDR = c(0.000461807, 0.010750284, 0.058689577, 0.063706316, 0.081977203, 0.124866663),
+
+Fold_Enrichment = c(6.379223821, 9.472180825, 8.066631412, 5.483894162, 4.909664406, 16.30862438),
+
+Pathway = c("Path:hsa04060 Cytokine-cytokine receptor interaction", "Path:hsa04061 Viral protein interaction with cytokine and cytokine receptor", "Path:hsa04657 IL-17 signaling pathway", "Path:hsa05164 Influenza A", "Path:hsa04062 Chemokine signaling pathway", "Path:hsa04964 Proximal tubule bicarbonate reclamation"),
+
+Genes = c("CSF2  EPO  CXCL8  CXCL10  LEP  PPBP  CCL28  TNFRSF17  CCL8  GDF3", "CXCL8  CXCL10  PPBP  CCL28  CCL8", "CSF2  CXCL8  CXCL10  MMP13", "TPSD1  CXCL8  CXCL10  TPSB2  TPSAB1", "CXCL8  CXCL10  PPBP  CCL28  CCL8", "AQP1  CA4"),
+
+URL <- c("http://www.genome.jp/kegg-bin/show_pathway?hsa04060", "http://www.genome.jp/kegg-bin/show_pathway?hsa04061", "http://www.genome.jp/kegg-bin/show_pathway?hsa04657", "http://www.genome.jp/kegg-bin/show_pathway?hsa05164", "http://www.genome.jp/kegg-bin/show_pathway?hsa04062", "http://www.genome.jp/kegg-bin/show_pathway?hsa04964")
+)
+
 head(enrich)
 
 #selecting the top 5 pathways
