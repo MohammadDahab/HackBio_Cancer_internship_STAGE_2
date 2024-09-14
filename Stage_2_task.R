@@ -1,10 +1,16 @@
-##using glioblastoma dataset
+###Installing the packages
 install.packages('gplots')
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ggplots")
+
 install.packages('dplyr')
+
 library(gplots)
 library(dplyr)
+library(RColorBrewer)
 
-#Reading the data into a variable
+#Reading the data into a variable form the glioblastoma dataset
 glio_link <- 'https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv'
 glio <- read.csv(glio_link, row.names = 1)
 
@@ -15,7 +21,7 @@ sequential_palette <- colorRampPalette(brewer.pal(9, "Blues"))(100)
 ##Generating Heatmaps
 
 heatmap.2(as.matrix(glio), col = diverging_palette, scale = "row", trace = "none", dendrogram = "both", margins = c(10, 10), 
-main = "Heatmap with Diverging Palette")
+          main = "Heatmap with Diverging Palette")
 
 dev.copy(png, file = "heatmap_diverging_palette.png")
 
@@ -94,6 +100,7 @@ gp1data <- glio[, gp1]
 gp2data <- glio[, gp2]
 
 #view
+
 view(gp1data)
 
 #mean calc
@@ -101,7 +108,7 @@ gp1_mean <- rowMeans(gp1data)
 gp2_mean <- rowMeans(gp2data)
 
 #view data
-View(gp1_mean)
+gp1_mean
 
 #calc FC
 
@@ -167,4 +174,5 @@ ggplot(enrich_5, aes(x = reorder(Pathway, log_pval), y = log_pval)) +
        y = "-log10(p-value)") +
   theme_minimal() +
   theme(legend.position = "right")
-###THANK YOU, I HOPE IT WORKS
+
+#####=====THANK YOU, I HOPE THE CODE WORKS==============
