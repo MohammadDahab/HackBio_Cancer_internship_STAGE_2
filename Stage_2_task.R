@@ -143,7 +143,7 @@ write.csv(down_regulated, "down_reg.csv")
 
 library(ggplot2)
 
-## read the enrichment file with the top 5 pathways
+## Read the enrichment file with the top 5 pathways
 
 enrich <- read.csv("enrichment_all.csv", header = TRUE, sep = ",")
 head(enrich)
@@ -167,3 +167,4 @@ ggplot(enrich_5, aes(x = reorder(Pathway, log_pval), y = log_pval)) +
        y = "-log10(p-value)") +
   theme_minimal() +
   theme(legend.position = "right")
+###THANK YOU, I HOPE IT WORKS
