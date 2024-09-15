@@ -19,7 +19,7 @@ Reading the online dataset from the hyperlink.
 3. Calcutaing the log2 fold change and p-value
 4. plotting the fold change and p-value to determine the cutoff
 5. Differentiate the up-regulated and down-regulated genes
-6. Applying Pathway enrichment analysis using ShinyGO
+6. Applying Pathway enrichment analysis using [ShinyGO](http://bioinformatics.sdstate.edu/go/)
 7. Selecting the top 5 pathways
 8. plotting with a lollipop-plot to express the number of genes associated with each pathway and their significance
 
